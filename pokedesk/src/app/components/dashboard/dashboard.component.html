@@ -1,0 +1,76 @@
+<app-header></app-header>
+<div class="container py-3" style="align-items: center; justify-content: center;">
+  <main>
+    <div class="justify-content-md-center row row-cols-6  row-cols-md-2 mb-3 text-center">
+      <div class="col">
+        <div class=" card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-white bg-primary border-primary">
+            <h4 class="my-0 fw-normal">POKEDEX</h4>
+          </div>
+          <img src="{{urlImage}}" style="align-items: center; justify-content: center;  margin:auto; display:block " width="250" height="200" alt="Foto Pokemon">
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">{{name}}<small class="text-muted fw-light">/{{type}}</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <h5>Ataque:<small class="fw-light" style="color: crimson; font-size: 18px;">{{attack}}</small></h5>
+              <h5>Defensa:<small class="fw-light" style="color: crimson; font-size: 18px;">{{defense}}</small></h5>
+              <h5>Ataque Especial:<small class="fw-light" style="color: crimson; font-size: 18px;">{{specialAttack}}</small></h5>
+            </ul>
+            <input type="text" class="form-control w-100" placeholder="Nombre Pokemon" [(ngModel)]="name" >
+            <button type="button" class="w-100 btn btn-lg btn-primary" (click)="searchPokemon()">Buscar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-white bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Habilidades</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">Cantidad<small class="text-muted fw-light" >/{{cont}}</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li style="color: red;">{{ability1}}</li>
+              <li style="color: blue;">{{ability2}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-white bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Evoluciones</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">Cantidad<small class="text-muted fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>{{evolucion}}</li>
+              <li>10 GB of storage</li>
+              <li>Priority email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-white bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Peso</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">{{weight}}<small class="text-muted fw-light">/lb</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>30 users included</li>
+              <li>15 GB of storage</li>
+              <li>Phone and email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<app-footer></app-footer>
